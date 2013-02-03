@@ -11,7 +11,7 @@ jQuery(function($){
 	$('#login_form').submit(function(event){
 		event.preventDefault();
 
-		username = $('#username').val();
+		username = $('#username').val().split(' ').join('_');
 
 		if(username){
 			if($('#'+username).text()){
